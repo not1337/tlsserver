@@ -1,0 +1,38 @@
+/*
+ * This file is part of the tlsserver project
+ *
+ * (C) 2020 Andreas Steinmetz, ast@domdv.de
+ * The contents of this file is licensed under the GPL version 2 or, at
+ * your choice, any later version of this license.
+ */
+
+V_1_0
+{
+	global:
+		tls_server_global_init;
+		tls_server_global_fini;
+		tls_server_init;
+		tls_server_add_dhfile;
+		tls_server_set_ticket_lifetime;
+		tls_server_add_server;
+		tls_server_add_client_cert_ca;
+		tls_server_add_verify_cafile;
+		tls_server_add_verify_crlfile;
+		tls_server_set_client_cert_resume;
+		tls_server_resume_only_for_tls13;
+		tls_server_set_alpn;
+		tls_server_fini;
+		tls_server_accept;
+		tls_server_disconnect;
+		tls_server_get_sni_name;
+		tls_server_get_alpn;
+		tls_server_get_client_cert_cn;
+		tls_server_get_client_cert_on;
+		tls_server_get_client_cert_ou;
+		tls_server_get_tls_version;
+		tls_server_get_resumption_state;
+		tls_server_write;
+		tls_server_read;
+	local:
+		*;
+};
