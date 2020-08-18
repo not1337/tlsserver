@@ -36,8 +36,8 @@ HDRDIR=/usr/local/include
 # compiler and flags
 #
 CC=gcc
-CFLAGS=-O2 -g
-LFLAGS=-g
+CFLAGS=-O2
+LFLAGS=-s
 #
 # enable the to actually remove all unreferenced code:
 #
