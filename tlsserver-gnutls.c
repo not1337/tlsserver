@@ -681,9 +681,9 @@ static void *gnu_server_init(int tls_version_min,int tls_version_max,
 	strcat(bfr,":%COMPAT:%DISABLE_WILDCARDS");
 	strcat(bfr,":-AES-128-CCM:-AES-256-CCM");
 	if(!(ciphers&TLS_SERVER_CIPHER_STRENGTH_128))
-		strcat(bfr,":-AES-128-GCM:-AES-128-CBC:-CHACHA20-POLY1305");
+		strcat(bfr,":-AES-128-GCM:-AES-128-CBC");
 	if(!(ciphers&TLS_SERVER_CIPHER_STRENGTH_256))
-		strcat(bfr,":-AES-256-GCM:-AES-256-CBC");
+		strcat(bfr,":-AES-256-GCM:-AES-256-CBC:-CHACHA20-POLY1305");
 	if(!(ciphers&TLS_SERVER_CIPHER_GROUP_ECDH))
 		strcat(bfr,":-ECDHE-ECDSA:-ECDHE-RSA");
 	if(!(ciphers&TLS_SERVER_CIPHER_GROUP_DH))strcat(bfr,":-DHE-RSA");
